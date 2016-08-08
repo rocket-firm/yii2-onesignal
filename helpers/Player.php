@@ -59,6 +59,12 @@ class Player extends Request
         return false;
     }
 
+    /**
+     * Edit player info
+     * @param  array $options Parameters to edit.
+     * Visit [onesignal.com](https://documentation.onesignal.com/) for more details.
+     * @return boolean returns true if edition is successfully done
+     */
     public function edit($options)
     {
         if (!$this->id) {
@@ -76,6 +82,11 @@ class Player extends Request
         return $result['success'];
     }
 
+    /**
+     * Adds tag to selected player
+     * @param array|string  $tagName  Tags to be added
+     * @param boolean $tagValue returns true if edition is successfully done
+     */
     public function addTag($tagName, $tagValue = true)
     {
         if (is_array($tagName)) {
@@ -85,6 +96,11 @@ class Player extends Request
         }
     }
 
+    /**
+     * Removes tags from player
+     * @param  array|string  $tagName  Tag to be removed
+     * @param boolean $tagValue returns true if edition is successfully done
+     */
     public function removeTag($tagName)
     {
         return $this->addTag($tagName, '');
