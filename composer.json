@@ -3,8 +3,8 @@
     "description": "Yii2 component for OneSignal.com integration",
     "type": "library",
     "require": {
-        "yiisoft/yii2": "*",
-        "linslin/yii2-curl" : "*"
+        "yiisoft/yii2": "^2.0",
+        "linslin/yii2-curl" : "^1.0.8"
     },
     "license": "MIT",
     "authors": [
@@ -15,8 +15,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "rocketfirm\\onesignal": "",
-            "rocketfirm\\onesignal\\helpers": "helpers"
+            "rocketfirm\\onesignal\\": "",
+            "rocketfirm\\onesignal\\helpers\\": "helpers"
         }
     }
 }
