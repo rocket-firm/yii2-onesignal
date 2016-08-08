@@ -1,0 +1,22 @@
+{
+    "name": "rocketfirm/yii2-onesignal",
+    "description": "Yii2 component for OneSignal.com integration",
+    "type": "library",
+    "require": {
+        "yiisoft/yii2": "*",
+        "linslin/yii2-curl" : "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "naffiq",
+            "email": "galymzhan@rocketfirm.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "rocketfirm\\onesignal": "",
+            "rocketfirm\\onesignal\\helpers": "helpers",
+        }
+    }
+}
