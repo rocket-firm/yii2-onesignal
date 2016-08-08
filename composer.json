@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "rocketfirm\\onesignal": "",
-            "rocketfirm\\onesignal\\helpers": "helpers",
+            "rocketfirm\\onesignal\\helpers": "helpers"
         }
     }
 }
