@@ -11,6 +11,13 @@ namespace rocketfirm\onesignal\helpers;
 
 use yii\base\Exception;
 
+/**
+ * Class Player
+ *
+ * Used for interactions with users api
+ *
+ * @package rocketfirm\onesignal\helpers
+ */
 class Player extends Request
 {
     public $id;
@@ -28,11 +35,18 @@ class Player extends Request
     }
 
     /**
-     * Adds device to
+     * Adds device to player
      *
-     * @param int   $deviceType 0 = iOS, 1 = Android, 2 = Amazon, 3 = WindowsPhone(MPNS),
-     *                          4 = ChromeApp, 5 = ChromeWebsite, 6 = WindowsPhone(WNS),
-     *                          7 = Safari, 8 = Firefox, 9 = Mac OS X
+     * @param int   $deviceType 0 = iOS,
+     *                          1 = Android,
+     *                          2 = Amazon,
+     *                          3 = WindowsPhone(MPNS),
+     *                          4 = ChromeApp,
+     *                          5 = ChromeWebsite,
+     *                          6 = WindowsPhone(WNS),
+     *                          7 = Safari,
+     *                          8 = Firefox,
+     *                          9 = Mac OS X
      *
      * @param array $options    Additional options can be found at OneSignal docs page
      *                          https://documentation.onesignal.com/docs/players-add-a-device
@@ -64,6 +78,8 @@ class Player extends Request
      * @param  array $options Parameters to edit.
      * Visit [onesignal.com](https://documentation.onesignal.com/) for more details.
      * @return boolean returns true if edition is successfully done
+     *
+     * @throws Exception
      */
     public function edit($options)
     {
@@ -86,6 +102,8 @@ class Player extends Request
      * Adds tag to selected player
      * @param array|string  $tagName  Tags to be added
      * @param boolean $tagValue returns true if edition is successfully done
+     *
+     * @return bool|mixed
      */
     public function addTag($tagName, $tagValue = true)
     {
@@ -99,7 +117,8 @@ class Player extends Request
     /**
      * Removes tags from player
      * @param  array|string  $tagName  Tag to be removed
-     * @param boolean $tagValue returns true if edition is successfully done
+     *
+     * @return bool|mixed
      */
     public function removeTag($tagName)
     {
