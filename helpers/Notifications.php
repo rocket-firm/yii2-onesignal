@@ -45,7 +45,7 @@ class Notifications extends Request
     }
 
     /**
-     * Posts notificaton to OneSignal API
+     * Posts notification to OneSignal API
      * @param  array  $contents array with lang id as keys and message as value
      * **Example:**
      * ```
@@ -71,8 +71,17 @@ class Notifications extends Request
         return $result;
     }
 
-    public function cancel()
+    /**
+     * Used to stop a scheduled or currently outgoing notification.
+     * @param $id string
+     * @return array
+     */
+    public function cancel($id)
     {
+        $result = $this->curl->delete(
+            $this->apiBaseUrl . $this->methodName . "/{$id}?app_id={$this->appId}"
+        );
 
+        return json_decode($result);
     }
 }
