@@ -6,7 +6,7 @@ Yii2 component for OneSignal.com integration. Any contribution is highly encoura
 Preferred way to install is through [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
 ```
-composer install rocketfirm/onesignal
+composer require rocketfirm/yii2-onesignal
 ```
 
 ## Configuration
