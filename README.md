@@ -18,6 +18,7 @@ Add following code to your configuration file (main.php):
 	// ...
 
 	'onesignal' => [
+		'class' => '\rocketfirm\onesignal\OneSignal',
 		'appId' => 'ONESIGNAL_APP_ID',
 		'apiKey' => 'ONESIGNAL_API_KEY',
 	]
