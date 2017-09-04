@@ -13,14 +13,18 @@ composer require rocketfirm/yii2-onesignal
 
 Add following code to your configuration file (main.php):
 
-```
-'components' => [
-	// ...
+```php
+<?php
 
-	'onesignal' => [
-		'class' => '\rocketfirm\onesignal\OneSignal',
-		'appId' => 'ONESIGNAL_APP_ID',
-		'apiKey' => 'ONESIGNAL_API_KEY',
+return [
+	'components' => [
+		// ...
+
+		'onesignal' => [
+			'class' => '\rocketfirm\onesignal\OneSignal',
+			'appId' => 'ONESIGNAL_APP_ID',
+			'apiKey' => 'ONESIGNAL_API_KEY',
+		]
 	]
 ]
 ```
@@ -28,12 +32,14 @@ Add following code to your configuration file (main.php):
 ## Usage
 
 After adding onesignal component to your project you can now simply add players to your OneSignal application by running following code:
-```
+```php
+<?php
 \Yii::$app->onesignal->players()->add($deviceType, $options);
 ```
 
 Run following command to send notifications:
-```
+```php
+<?php
 \Yii::$app->onesignal->notifications()->create($message, $options)
 ```
 
