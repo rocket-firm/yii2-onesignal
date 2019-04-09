@@ -10,9 +10,9 @@ namespace rocketfirm\onesignal\helpers;
 
 
 use linslin\yii2\curl\Curl;
-use yii\base\Object;
+use yii\base\BaseObject;
 
-class Request extends Object
+class Request extends BaseObject
 {
     /**
      * Curl object for RESTful API
