@@ -35,6 +35,25 @@ class Player extends Request
     }
 
     /**
+     * View player info
+     * @return object returns Player object
+     *
+     * @throws Exception
+     */
+    public function viewOne()
+    {
+        if (!$this->id) {
+            throw new Exception('ID of player is not defined');
+        }
+
+        return json_decode(
+            $this
+                ->curl
+                ->get($this->apiBaseUrl . $this->methodName . '/' . $this->id . '?app_id=' . $this->appId)
+        );
+    }
+
+    /**
      * Adds device to player
      *
      * @param int   $deviceType 0 = iOS,
